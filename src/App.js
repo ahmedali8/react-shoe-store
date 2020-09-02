@@ -1,13 +1,14 @@
 import React from 'react';
 
-import { Header } from './components';
+import { Header, Hero } from './components';
 
-import './App.css';
+import './App.module.css';
 
 function App() {
 	return (
 		<div>
 			<Header />
+			<Hero />
 		</div>
 	);
 }

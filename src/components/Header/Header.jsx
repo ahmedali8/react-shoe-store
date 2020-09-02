@@ -8,12 +8,12 @@ const Header = () => {
     const navNames = ['Home', 'Featured', 'Products', 'About us', 'Contact us'];
 
     const [isMobile, setIsMobile] = useState(
-        window.matchMedia('(max-width: 768px)').matches
+        window.matchMedia('(max-width: 720px)').matches
     );
 
     useEffect(() => {
         window.addEventListener('resize', () => {
-            setIsMobile(window.matchMedia('(max-width: 768px)').matches);
+            setIsMobile(window.matchMedia('(max-width: 720px)').matches);
         });
     }, []);
 

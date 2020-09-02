@@ -28,13 +28,13 @@ export default function NavBar({ navNames }) {
 
     return (
         <div className={classes.root}>
-            <AppBar position="static">
+            <AppBar position="fixed">
                 <Toolbar>
                     <Typography variant="h6" className={classes.title}>
                         Shoes Inc.
                     </Typography>
                     {navNames.map((navName, index) => (
-                        <Button color="inherit" className={styles.button}>{navName}</Button>
+                        <Button key={index} color="inherit" className={styles.button}>{navName}</Button>
                     ))}
                 </Toolbar>
             </AppBar>
