@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Header, Hero } from './components';
+import { Header, Hero, FeaturedProducts } from './components';
 
 import './App.module.css';
 
@@ -9,6 +9,7 @@ function App() {
 		<div>
 			<Header />
 			<Hero />
+			<FeaturedProducts />
 		</div>
 	);
 }

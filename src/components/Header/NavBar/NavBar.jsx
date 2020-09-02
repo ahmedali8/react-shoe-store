@@ -28,7 +28,7 @@ export default function NavBar({ navNames }) {
 
     return (
         <div className={classes.root}>
-            <AppBar position="fixed">
+            <AppBar position="static">
                 <Toolbar>
                     <Typography variant="h6" className={classes.title}>
                         Shoes Inc.

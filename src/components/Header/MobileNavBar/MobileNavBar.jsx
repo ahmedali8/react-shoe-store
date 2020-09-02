@@ -80,7 +80,7 @@ export default function MobileNavBar({ navNames }) {
         <div className={classes.root}>
             <CssBaseline />
             <AppBar
-                position="fixed"
+                position="static"
                 className={clsx(classes.appBar, {
                     [classes.appBarShift]: open,
                 })}
