@@ -1,0 +1,101 @@
+.spacing > * + * {
+    margin-top: 32px !important;
+}
+
+.sectionTitle {
+    text-align: center !important;
+    font-size: clamp(40px, calc(5vw + 16px), 64px) !important;
+    font-weight: bold !important;
+    line-height: 1 !important;
+    color: #17353d !important;
+    margin-top: 80px !important;
+    margin-bottom: 80px !important;
+}
+
+.product {
+    width: 85% !important;
+    background: radial-gradient(var(--clr-inner, #000), var(--clr-outer, #fff)) !important;
+    padding: 3em !important;
+    border-radius: 1em !important;
+    margin: 0 auto;
+    margin-bottom: 5em !important;
+    text-align: center !important;
+}
+
+.productTitle {
+    font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem) !important;
+    text-transform: uppercase !important;
+    line-height: 1 !important;
+    color: #fff !important;
+    text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2) !important;
+}
+
+.productImage {
+    width: 80%;
+    margin: -5em 0 0 0 !important;
+}
+
+@media (min-width: 720px) {
+    .product {
+        text-align: left !important;
+        margin-bottom: 9em !important;
+    }
+
+    .productTitle {
+        margin: 0 !important;
+    }
+
+    .productImage {
+        float: right !important;
+        width: 65% !important;
+        shape-outside: url(../../images/shoe-1.png);
+        shape-margin: 1em !important;
+        margin: 0 -5em 0 0 !important;
+    }
+
+    .product.shoeLeft .productImage {
+        float: left !important;
+        shape-outside: url(../../images/shoe-2.png);
+        margin: 0 0 0 -5em !important;
+        shape-margin: 2em !important;
+    }
+}
+
+.btn {
+    display: inline-block !important;
+    text-decoration: none !important;
+    color: var(--clr-text, #fff) !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-size: 1.125rem !important;
+    padding: .5em 1.25em !important;
+    background: var(--clr-accent, blue) !important;
+    border-radius: .25em;
+    transition: opacity 250ms linear,
+                transform 250ms ease-in-out !important;
+}
+
+.btn:focus,
+.btn:hover {
+    transform: scale(1.1) !important;
+    opacity: .9 !important;
+}
+
+  
+.shoeRed {
+    --clr-inner: #faa700 !important;
+    --clr-outer: #e48d00 !important;
+    --clr-accent: #a1173c !important;
+}
+
+.shoeWhite {
+    --clr-inner: #fce4b3 !important;
+    --clr-outer: #eac886 !important;
+    --clr-accent: #2f4858 !important;
+}
+
+.shoeBlue {
+    --clr-inner: #6dd5ed !important;
+    --clr-outer: #2193b0 !important;
+    --clr-accent: #008951 !important;
+}
