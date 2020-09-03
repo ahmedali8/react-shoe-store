@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Header, Hero, FeaturedProducts, OurProducts } from './components';
+import { Header, Hero, FeaturedProducts, OurProducts, Footer } from './components';
 
 import './App.module.css';
 
@@ -11,6 +11,7 @@ function App() {
 			<Hero />
 			<FeaturedProducts />
 			<OurProducts />
+			<Footer />
 		</div>
 	);
 }
