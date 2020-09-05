@@ -48,14 +48,14 @@
     .productImage {
         float: right !important;
         width: 65% !important;
-        shape-outside: url(../../images/shoe-1.png);
+        shape-outside: url(../../images/shoe-4.png);
         shape-margin: 1em !important;
         margin: 0 -5em 0 0 !important;
     }
 
     .product.shoeLeft .productImage {
         float: left !important;
-        shape-outside: url(../../images/shoe-2.png);
+        shape-outside: url(../../images/shoe-5.png);
         margin: 0 0 0 -5em !important;
         shape-margin: 2em !important;
     }
