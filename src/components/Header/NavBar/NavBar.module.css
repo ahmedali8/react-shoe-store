@@ -1,3 +1,12 @@
+.button {
+    transition: backgroundColor 0.4s ease-in-out,
+                color 0.4s ease-in-out,
+                fontWeight 0.4s ease-in-out !important;
+}
+
 .button:hover {
-    border: 1.5px solid #faa700 !important;
+    /* border: 1.5px solid #faa700 !important; */
+    background-color: #ffd84a !important;
+    color: #000 !important;
+    font-weight: bold !important;
 }
