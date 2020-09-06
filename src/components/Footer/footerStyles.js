@@ -13,8 +13,8 @@ const useStyles = makeStyles((theme) => ({
     },
     link: {
         color: '#000',
-        width: '25px !important',
-        margin: '0 10px',
+        width: '25px',
+        margin: '0 12px',
 
     },
     linkContainer: {

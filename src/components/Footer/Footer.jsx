@@ -8,6 +8,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 
 import useStyles from './footerStyles';
+import styles from './Footer.module.css';
 
 
 const Footer = () => {
@@ -27,7 +28,7 @@ const Footer = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <AccountBoxIcon />
+                            <AccountBoxIcon className={styles.icon}/>
                         </Link>
                         <Link
                             className={classes.link}
@@ -35,7 +36,7 @@ const Footer = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <GitHubIcon />
+                            <GitHubIcon className={styles.icon}/>
                         </Link>
                         <Link
                             className={classes.link}
@@ -43,7 +44,7 @@ const Footer = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <FacebookIcon />
+                            <FacebookIcon className={styles.icon}/>
                         </Link>
                         <Link
                             className={classes.link}
@@ -51,7 +52,7 @@ const Footer = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <InstagramIcon />
+                            <InstagramIcon className={styles.icon}/>
                         </Link>
                     </div>
 

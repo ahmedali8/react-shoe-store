@@ -1,0 +1,29 @@
+.btn {
+    display: inline-block !important;
+    text-decoration: none !important;
+    color: var(--clr-text, #fff) !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-size: 1.125rem !important;
+    padding: .5em 1.25em !important;
+    background: var(--clr-accent, blue) !important;
+    border-radius: .25em;
+    transition: opacity 250ms linear,
+                transform 250ms ease-in-out !important;
+}
+
+.btn:focus,
+.btn:hover {
+    transform: scale(1.1) !important;
+    opacity: .9 !important;
+}
+
+.icon {
+    font-size: 28px !important;
+    transition: transform 250ms ease-in-out !important;
+}
+
+.icon:focus,
+.icon:hover {
+    transform: scale(1.2) !important;
+}
