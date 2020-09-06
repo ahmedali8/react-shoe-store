@@ -85,7 +85,7 @@ export default function MobileNavBar({ navNames }) {
                     [classes.appBarShift]: open,
                 })}
             >
-                <Toolbar>
+                <Toolbar id="back-to-top-anchor">
                     <Typography variant="h6" noWrap className={classes.title}>
                         Shoes Inc.
                     </Typography>
