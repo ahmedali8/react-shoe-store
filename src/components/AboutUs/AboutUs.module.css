@@ -1,0 +1,27 @@
+.container {
+    /* margin-bottom: 30px !important;
+    padding-bottom: 30px !important; */
+    height: 100vh !important;
+}
+
+.Maintitle {
+    font-size: clamp(40px, calc(5vw + 16px), 50px) !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 40px auto !important;   
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+.bgColor {
+    background-color: #2193b0 !important;
+}
+
+.grid {
+    padding: 10px !important;
+    margin: 10px !important;
+}
