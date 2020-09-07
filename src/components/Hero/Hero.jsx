@@ -8,22 +8,22 @@ import styles from './Hero.module.css';
 import image from '../../images/hero.png';
 
 const Hero = () => {
-    return (
-        <div className={styles.container}>
-            <Container component='div' maxWidth='md' justify='center' className={clsx(styles.hero)}>
-                <Typography 
-                    variant='h1'
-                    color='primary' 
-                    align='left'
-                    gutterBottom
-                    className={clsx(styles.primaryTitle)}
-                >
-                    Amazing shoes at an amazing price
+	return (
+		<div className={styles.container}>
+			<Container component='div' maxWidth='md' justify='center' className={clsx(styles.hero)}>
+				<Typography
+					variant='h1'
+					color='primary'
+					align='left'
+					gutterBottom
+					className={clsx(styles.primaryTitle)}
+				>
+					Amazing shoes at an amazing price
                 </Typography>
-                <img src={image} alt='Nike Shoe' className={styles.image} />
-            </Container>
-        </div>
-    );
+				<img src={image} alt='Nike Shoe' className={styles.image} />
+			</Container>
+		</div>
+	);
 }
 
 export default Hero;
