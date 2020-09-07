@@ -5,7 +5,29 @@ import MobileNavBar from './MobileNavBar/MobileNavBar';
 
 const Header = () => {
 
-	const navNames = ['Home', 'Featured', 'Products', 'About us', 'Contact us'];
+    const navData = [
+        {
+            name: 'Home',
+            link: '/'
+        },
+        {
+            name: 'Featured',
+            link: 'featured-products'
+        },
+        {
+            name: 'Products',
+            link: 'our-products'
+        },
+        {
+            name: 'About Us',
+            link: 'about-us'
+        },
+        {
+            name: 'Contact Us',
+            link: 'contact-us'
+        },
+    ];
+
 
 	const [isMobile, setIsMobile] = useState(
 		window.matchMedia('(max-width: 720px)').matches
@@ -20,9 +42,9 @@ const Header = () => {
 	return (
 		<>
 			{isMobile ? (
-				<MobileNavBar navNames={navNames} />
+				<MobileNavBar navData={navData} />
 			) : (
-					<NavBar navNames={navNames} />
+					<NavBar navData={navData} />
 				)}
 		</>
 	);

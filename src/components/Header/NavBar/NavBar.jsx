@@ -6,6 +6,8 @@ import {
 	Button
 } from '@material-ui/core';
 
+import { Link } from 'react-router-dom';
+
 import { makeStyles } from '@material-ui/core/styles';
 import styles from './NavBar.module.css';
 
@@ -23,9 +25,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function NavBar({ navNames }) {
-	const classes = useStyles();
-
+export default function NavBar({ navData }) {
+    const classes = useStyles();
+    
 	return (
 		<div className={classes.root}>
 			<AppBar position="static">
@@ -33,9 +35,13 @@ export default function NavBar({ navNames }) {
 					<Typography variant="h6" className={classes.title}>
 						Shoes Inc.
                     </Typography>
-					{navNames.map((navName, index) => (
-						<Button key={index} color="inherit" className={styles.button}>{navName}</Button>
+
+                    {navData.map(({ name, link }, index) => (
+                        <Link to={link} key={index} className={styles.link}>
+                            <Button key={index} color="inherit" className={styles.button}>{name}</Button>
+                        </Link>
 					))}
+
 				</Toolbar>
 			</AppBar>
 		</div>
