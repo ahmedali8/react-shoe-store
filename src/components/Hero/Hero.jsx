@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography';
 
 
 import styles from './Hero.module.css';
-import image from '../../images/hero.png';
 
 const Hero = () => {
 	return (
@@ -20,7 +19,7 @@ const Hero = () => {
 				>
 					Amazing shoes at an amazing price
                 </Typography>
-				<img src={image} alt='Nike Shoe' className={styles.image} />
+				<img src={'/assets/images/hero.png'} alt='Nike Shoe' className={styles.image} />
 			</Container>
 		</div>
 	);

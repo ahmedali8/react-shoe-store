@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import { Grid, Typography } from '@material-ui/core';
 
 import styles from './FeaturedProducts.module.css';
-import { shoe1Png, shoe2Png, shoe3Png } from '../../images';
 
 
 const FeaturedProducts = () => {
@@ -27,21 +26,21 @@ const FeaturedProducts = () => {
                 </Grid>
 
 				<Grid item xs={12} md={3} className={styles.featuredItems}>
-					<img src={shoe1Png} alt='shoe1' className={styles.featuredImages} />
+					<img src={'/assets/images/shoe-1.png'} alt='shoe1' className={styles.featuredImages} />
 					<Typography variant="body1" className={styles.featuredDetails}>
 						<span>$99</span>
                         shoe name
                     </Typography>
 				</Grid>
 				<Grid item xs={12} md={3} className={styles.featuredItems}>
-					<img src={shoe2Png} alt='shoe2' className={clsx(styles.featuredImages, styles.blackShoe)} />
+					<img src={'/assets/images/shoe-2.png'} alt='shoe2' className={clsx(styles.featuredImages, styles.blackShoe)} />
 					<Typography variant="body1" className={styles.featuredDetails} >
 						<span>$99</span>
                         shoe name
                     </Typography>
 				</Grid>
 				<Grid item xs={12} md={3} className={styles.featuredItems}>
-					<img src={shoe3Png} alt='shoe3' className={styles.featuredImages} />
+					<img src={'/assets/images/shoe-3.png'} alt='shoe3' className={styles.featuredImages} />
 					<Typography variant="body1" className={styles.featuredDetails}>
 						<span>$99</span>
                         shoe name
