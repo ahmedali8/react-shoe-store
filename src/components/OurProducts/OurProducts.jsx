@@ -56,6 +56,12 @@ const OurProducts = () => {
 						<Button className={styles.btn}>Buy Now</Button>
 					</div>
 				</Grid>
+
+                <Grid item xs={10} md={10} >
+                    <Button variant="contained" color="secondary" className={styles.productBtn}>
+                        All Products
+                    </Button>
+                </Grid>
 			</Grid>
 		</div>
 	);

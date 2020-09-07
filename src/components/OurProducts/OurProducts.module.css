@@ -1,4 +1,4 @@
-.spacing > * + * {
+.spacing>*+* {
     margin-top: 32px !important;
 }
 
@@ -40,11 +40,9 @@
         text-align: left !important;
         margin-bottom: 9em !important;
     }
-
     .productTitle {
         margin: 0 !important;
     }
-
     .productImage {
         float: right !important;
         width: 65% !important;
@@ -52,7 +50,6 @@
         shape-margin: 1em !important;
         margin: 0 -5em 0 0 !important;
     }
-
     .product.shoeLeft .productImage {
         float: left !important;
         shape-outside: url(../../images/shoe-5.png);
@@ -63,7 +60,6 @@
 
 .btn {
     display: inline-block !important;
-    text-decoration: none !important;
     color: var(--clr-text, #fff) !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
@@ -71,17 +67,27 @@
     padding: .5em 1.25em !important;
     background: var(--clr-accent, blue) !important;
     border-radius: .25em;
-    transition: opacity 250ms linear,
-                transform 250ms ease-in-out !important;
+    transition: opacity 250ms linear, transform 250ms ease-in-out !important;
 }
 
-.btn:focus,
-.btn:hover {
+.btn:focus, 
+.btn:hover, 
+.productBtn:hover {
     transform: scale(1.1) !important;
     opacity: .9 !important;
 }
 
-  
+.productBtn {
+    color: #fff !important;
+    font-weight: 700 !important;
+    font-size: 1.125rem !important;
+    padding: .5em 1.25em !important;
+    border-radius: .25em;
+    transition: opacity 250ms linear, 
+                transform 250ms ease-in-out !important;
+    margin: -10px auto 30px auto !important;
+}
+
 .shoeRed {
     --clr-inner: #faa700 !important;
     --clr-outer: #e48d00 !important;
