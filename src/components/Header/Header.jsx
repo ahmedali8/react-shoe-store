@@ -15,8 +15,12 @@ const Header = () => {
             link: 'featured-products'
         },
         {
+            name: 'New Arrivals',
+            link: 'new-arrivals'
+        },
+        {
             name: 'Products',
-            link: 'our-products'
+            link: 'product-index'
         },
         {
             name: 'About Us',

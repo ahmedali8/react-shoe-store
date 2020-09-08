@@ -71,7 +71,7 @@ export default function MobileNavBar({ navData }) {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
 
-    const iconClasses = ['flaticon-home', 'flaticon-sport-shoes', 'flaticon-shoes', 'flaticon-information', 'flaticon-24-hours-support'];
+    const iconClasses = ['flaticon-home', 'flaticon-sport-shoes', 'flaticon-shoe', 'flaticon-shoes', 'flaticon-information', 'flaticon-24-hours-support'];
 
     const handleDrawerOpen = () => {
         setOpen(true);
