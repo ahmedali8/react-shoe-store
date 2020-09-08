@@ -13,3 +13,8 @@
     margin: 5px !important;
     margin-bottom: 20px !important;
 }
+
+.link {
+    text-decoration: none !important;
+    color: #fff !important;
+}

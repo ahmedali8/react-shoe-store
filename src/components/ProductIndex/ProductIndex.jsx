@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 
 import { GlobalContext } from '../../context/GlobalState';
 
+import { Link, Outlet } from 'react-router-dom';
+
 import {
     Grid,
     Typography,
@@ -11,10 +13,13 @@ import {
     CardMedia,
     CardActions,
     Button,
-    IconButton
+    IconButton,
+    FormControlLabel,
+    Checkbox
 } from '@material-ui/core';
 
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import Favorite from '@material-ui/icons/Favorite';
+import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 import ShareIcon from '@material-ui/icons/Share';
 
 import styles from './ProductIndex.module.css';
@@ -72,12 +77,22 @@ const ProductIndex = () => {
                                     </CardContent>
                                 </CardActionArea>
                                 <CardActions>
-                                    <Button size="small" color="primary" variant="contained">
-                                        Buy Now
-                                </Button>
-                                    <IconButton aria-label="add to favorites">
-                                        <FavoriteIcon />
-                                    </IconButton>
+                                    <Link to={productId} className={styles.link}>
+                                        <Button size="small" color="primary" variant="contained">
+                                            Buy Now
+                                        </Button>
+                                    </Link>
+                                    
+                                    <FormControlLabel style={{marginRight: '0'}}
+                                        control={
+                                            <Checkbox 
+                                                icon={<FavoriteBorder />} 
+                                                checkedIcon={<Favorite />} 
+                                                name="checkedHeart" 
+                                            />
+                                        }
+                                    />
+
                                     <IconButton aria-label="share">
                                         <ShareIcon />
                                     </IconButton>
@@ -88,6 +103,8 @@ const ProductIndex = () => {
                     </Grid>
                 </Grid>
             </Grid>
+
+            <Outlet />
         </div>
     );
 };
