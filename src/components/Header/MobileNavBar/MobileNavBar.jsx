@@ -92,7 +92,9 @@ export default function MobileNavBar({ navData }) {
             >
                 <Toolbar id="back-to-top-anchor">
                     <Typography variant="h6" noWrap className={classes.title}>
-                        Shoes Inc.
+                        <Link to="/" style={{textDecoration: 'none', color: '#fff'}}>
+                            Shoes Inc.
+                        </Link>
                     </Typography>
                     <IconButton
                         color="inherit"
