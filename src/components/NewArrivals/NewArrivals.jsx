@@ -2,10 +2,11 @@ import React from 'react';
 import clsx from 'clsx';
 import { Grid, Typography, Button } from '@material-ui/core';
 
-import styles from './OurProducts.module.css';
+
+import styles from './NewArrivals.module.css';
 
 
-const OurProducts = () => {
+const NewArrivals = () => {
 	return (
 		<div>
 			<Grid
@@ -54,15 +55,10 @@ const OurProducts = () => {
 						<Button className={styles.btn}>Buy Now</Button>
 					</div>
 				</Grid>
-
-                <Grid item xs={10} md={10} >
-                    <Button variant="contained" color="secondary" className={styles.productBtn}>
-                        All Products
-                    </Button>
-                </Grid>
 			</Grid>
+            
 		</div>
 	);
 };
 
-export default OurProducts;
+export default NewArrivals;

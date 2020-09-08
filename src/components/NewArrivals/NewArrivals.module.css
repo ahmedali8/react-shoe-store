@@ -77,6 +77,11 @@
     opacity: .9 !important;
 }
 
+.link {
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
 .productBtn {
     color: #fff !important;
     font-weight: 700 !important;
