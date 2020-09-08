@@ -1,0 +1,58 @@
+
+.Maintitle {
+    font-size: clamp(40px, calc(5vw + 16px), 50px) !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 40px auto !important;   
+    margin-bottom: 60px !important;
+}
+
+.grid > * {
+    padding: 10px !important;
+    margin-left: 30px !important;
+    /* margin-bottom: 10px !important; */
+}
+
+.link {
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
+.name {
+    margin-top: 0 !important;
+}
+
+.name,
+.price {
+    font-weight: 700 !important;
+}
+
+.colors {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-top: 0 !important;
+    margin-left: 35px !important;
+}
+
+.colors > * {
+    margin: 5px !important;
+}
+
+.btn {
+    margin-left: 40px !important;
+}
+
+.btn > * {
+    font-weight: 600 !important;
+    padding: 0 10px !important;
+}
+
+
+@media (min-width: 720px) {
+    .container {
+        height: 100vh !important;
+    }
+}
