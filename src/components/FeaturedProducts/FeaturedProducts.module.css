@@ -3,7 +3,7 @@
     font-size: clamp(40px, calc(5vw + 16px), 64px) !important;
     font-weight: bold !important;
     line-height: 1 !important;
-    color: #17353d !important;
+    /* color: #17353d !important; */
     margin-top: 80px !important;
     margin-bottom: 80px !important;
 }

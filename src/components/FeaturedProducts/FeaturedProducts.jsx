@@ -19,7 +19,8 @@ const FeaturedProducts = () => {
 					item
 					xs={12} md={12}
 					component={Typography}
-					variant='h2'
+                    variant='h2'
+                    color="primary"
 					className={styles.sectionTitle}
 				>
 					Featured Products
