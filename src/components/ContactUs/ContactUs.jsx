@@ -26,7 +26,7 @@ const ContactUs = () => {
 				<Grid item xs={10} md={5} className={styles.grid}>
 					<Grid container className={styles.boxes}>
 						<TextField
-							id="outlined-full-width"
+							id="name-outlined-full-width"
 							required
 							label="Name"
 							style={{ margin: 8 }}
@@ -41,7 +41,7 @@ const ContactUs = () => {
 						/>
 
 						<TextField
-							id="outlined-full-width"
+							id="email-outlined-full-width"
 							required
 							label="Email"
 							style={{ margin: 8 }}
