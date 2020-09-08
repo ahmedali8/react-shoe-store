@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import { Grid, Typography, Button } from '@material-ui/core';
 
+import { ProductIndex } from '../../components';
 
 import styles from './NewArrivals.module.css';
 
@@ -33,7 +34,7 @@ const NewArrivals = () => {
 						<Typography variant='body2' className={styles.productDescription}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam
 						perspiciatis facilis beatae laudantium quidem enim sit sequi!
                         </Typography>
-						<Button className={styles.btn}>Buy Now</Button>
+						<Button className={styles.btn} onClick={() => (alert('functionality to be added later'))}>Buy Now</Button>
 					</div>
 				</Grid>
 				<Grid item xs={10} md={10} >
@@ -43,7 +44,7 @@ const NewArrivals = () => {
 						<Typography variant='body2' className={styles.productDescription}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam
 						perspiciatis facilis beatae laudantium quidem enim sit sequi!
                         </Typography>
-						<Button className={styles.btn}>Buy Now</Button>
+						<Button className={styles.btn} onClick={() => (alert('functionality to be added later'))}>Buy Now</Button>
 					</div>
 				</Grid>
 				<Grid item xs={10} md={10} >
@@ -53,7 +54,7 @@ const NewArrivals = () => {
 						<Typography variant='body2' className={styles.productDescription}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam
 						perspiciatis facilis beatae laudantium quidem enim sit sequi!
                         </Typography>
-						<Button className={styles.btn}>Buy Now</Button>
+						<Button className={styles.btn} onClick={() => (alert('functionality to be added later'))}>Buy Now</Button>
 					</div>
 				</Grid>
 			</Grid>
