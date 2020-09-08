@@ -8,3 +8,4 @@ export { default as ProductDetails } from './ProductDetails/ProductDetails';
 export { default as AboutUs } from './AboutUs/AboutUs';
 export { default as ContactUs } from './ContactUs/ContactUs';
 export { default as Footer } from './Footer/Footer';
+export { default as NotFound } from './NotFound/NotFound';
