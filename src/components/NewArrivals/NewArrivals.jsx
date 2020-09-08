@@ -22,7 +22,7 @@ const NewArrivals = () => {
 					variant='h2'
 					className={styles.sectionTitle}
 				>
-					Our Products
+					New Arrivals
                 </Grid>
 
 				<Grid item xs={10} md={10} >

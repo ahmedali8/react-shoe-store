@@ -2,7 +2,7 @@ export { default as Header } from './Header/Header';
 export { default as Home } from './Home/Home';
 export { default as Hero } from './Hero/Hero';
 export { default as FeaturedProducts } from './FeaturedProducts/FeaturedProducts';
-export { default as OurProducts } from './OurProducts/OurProducts';
+export { default as NewArrivals } from './NewArrivals/NewArrivals';
 export { default as ProductIndex } from './ProductIndex/ProductIndex';
 export { default as ProductDetails } from './ProductDetails/ProductDetails';
 export { default as AboutUs } from './AboutUs/AboutUs';
