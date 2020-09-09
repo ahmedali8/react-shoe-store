@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 
 import { Grid, Typography, Card, CardMedia, Button } from '@material-ui/core';
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
+import RemoveIcon from '@material-ui/icons/Remove';
 
 import { GlobalContext } from '../../context/GlobalState';
 
@@ -9,13 +12,16 @@ import styles from './Cart.module.css';
 
 const Cart = () => {
 
-    const { cart } = useContext(GlobalContext);
+    const { cart, increase, decrease } = useContext(GlobalContext);
+
+    // console.log(cart)
 
     // const fake = [
     //     {
     //         _productId: "featured-product-1",
     //         name: "SHOE 1",
     //         price: 99,
+    //         count: 1,
     //         img:
     //             "/assets/images/shoes/shoe-1.jpg",
     //         colors: ["orange", "black", "crimson", "teal"],
@@ -48,7 +54,7 @@ const Cart = () => {
             </Grid>
 
             {
-                cart.map(({ _productId, name, price, img }) => (
+                cart.map(({ _productId, name, price, count, img }) => (
 
                     <Grid
                         container
@@ -85,15 +91,28 @@ const Cart = () => {
                                 <Typography variant="body2" component="p">
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                                 </Typography>
+                                <Grid
+                                    container
+                                    direction="row"
+                                    justify="flex-start"
 
-                                <Button
-                                    size="small"
-                                    color="primary"
-                                    variant="contained"
-                                    className={styles.btn}
                                 >
-                                    Remove from Cart
-                                </Button>
+                                    <Fab size="small" color="secondary" onClick={() => decrease(_productId)}>
+                                        <RemoveIcon />
+                                    </Fab>
+                                    <Button color="secondary">{count}</Button>
+                                    <Fab size="small" color="secondary" onClick={() => increase(_productId)}>
+                                        <AddIcon />
+                                    </Fab>
+                                    <Button
+                                        size="small"
+                                        color="primary"
+                                        variant="contained"
+                                        className={styles.btn}
+                                    >
+                                        Remove from Cart
+                                    </Button>
+                                </Grid>
                             </Grid>
                         </Grid>
                     </Grid>
