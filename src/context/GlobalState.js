@@ -306,20 +306,30 @@ export const GlobalProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(AppReducer, initialtate);
 
-    console.log(state)
 
+    // function for adding the product to the cart
     function addCart(productId) {
-        const { products } = state;
+        const { products, cart } = state;
 
-        const data = products.filter(({ _productId }) => {
-            return _productId === productId
+        // check that the item should not be already added to cart
+        const check = cart.every(product => {
+            return product._productId !== productId;
         });
 
-        dispatch({
-            type: 'ADD_TO_CART',
-            payload: data
-        });
+        if(check) {
 
+            const data = products.filter(({ _productId }) => {
+                return _productId === productId;
+            });
+    
+            dispatch({
+                type: 'ADD_TO_CART',
+                payload: data
+            });
+        }
+        else {
+            alert('This product is already added to the cart');
+        }
     };
 
     return (
