@@ -17,6 +17,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
+import CartBadge from '../CartBadge/CartBadge';
+
 import { Link } from 'react-router-dom';
 
 const drawerWidth = 200;
@@ -96,6 +98,9 @@ export default function MobileNavBar({ navData }) {
                             Shoes Inc.
                         </Link>
                     </Typography>
+
+                    <CartBadge />
+                    
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
     AppBar,
     Toolbar,
@@ -6,7 +7,7 @@ import {
     Button
 } from '@material-ui/core';
 
-import { Link } from 'react-router-dom';
+import CartBadge from '../CartBadge/CartBadge';
 
 import { makeStyles } from '@material-ui/core/styles';
 import styles from './NavBar.module.css';
@@ -48,6 +49,7 @@ export default function NavBar({ navData }) {
                         </Link>
                     ))}
 
+                    <CartBadge />
                 </Toolbar>
             </AppBar>
         </div>
