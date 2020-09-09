@@ -2,8 +2,6 @@ import React from 'react';
 import clsx from 'clsx';
 import { Grid, Typography, Button } from '@material-ui/core';
 
-import { ProductIndex } from '../../components';
-
 import styles from './NewArrivals.module.css';
 
 
