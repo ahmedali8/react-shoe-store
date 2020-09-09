@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Header, Home, FeaturedProducts, NewArrivals, Footer, AboutUs, ContactUs, ProductIndex, ProductDetails, NotFound } from './components';
+import { Header, Home, FeaturedProducts, NewArrivals, Footer, AboutUs, ContactUs, ProductIndex, ProductDetails, NotFound, Cart } from './components';
 import { Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/Header/ScrollToTop/ScrollToTop';
 
@@ -18,6 +18,8 @@ function App() {
 
                 <Route path="product-index" element={<ProductIndex />} />
                 <Route path="product-index/:productId" element={<ProductDetails />} />
+
+                <Route path="cart" element={<Cart />} />
                 
                 <Route path="about-us" element={<AboutUs />} />
                 <Route path="contact-us" element={<ContactUs />} />
