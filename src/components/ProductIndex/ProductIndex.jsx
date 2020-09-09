@@ -26,9 +26,9 @@ import styles from './ProductIndex.module.css';
 
 const ProductIndex = () => {
 
-    const { data } = useContext(GlobalContext);
+    const { products } = useContext(GlobalContext);
 
-    // console.log(data);
+    // console.log(products);
 
     return (
         <div>
@@ -56,9 +56,9 @@ const ProductIndex = () => {
                         alignItems="center"
                         className={styles.grid}
                     >
-                        {Object.entries(data).map(([productId, { name, img }]) => (
+                        {products.map(({ _productId, name, img }, index) => (
 
-                            <Grid item component={Card} xs={12} sm={5} md={3} key={productId}>
+                            <Grid item component={Card} xs={12} sm={5} md={3} key={index}>
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
@@ -77,7 +77,7 @@ const ProductIndex = () => {
                                     </CardContent>
                                 </CardActionArea>
                                 <CardActions>
-                                    <Link to={productId} className={styles.link}>
+                                    <Link to={_productId} className={styles.link}>
                                         <Button size="small" color="primary" variant="contained">
                                             Buy Now
                                         </Button>
