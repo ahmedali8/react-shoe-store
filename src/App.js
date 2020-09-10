@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Header, Home, FeaturedProducts, NewArrivals, Footer, AboutUs, ContactUs, ProductIndex, ProductDetails, NotFound, Cart } from './components';
+import { Header, Home, FeaturedProducts, NewArrivals, Footer, AboutUs, ContactUs, ProductIndex, ProductDetails, NotFound, Cart, Payment } from './components';
 import { Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/Header/ScrollToTop/ScrollToTop';
 
-import './App.module.css';
+import styles from './App.module.css';
 
 function App() {
 	return (
-		<div>
+		<div classname={styles.container}>
 			<Header />
 
             <Routes>
@@ -20,6 +20,7 @@ function App() {
                 <Route path="product-index/:productId" element={<ProductDetails />} />
 
                 <Route path="cart" element={<Cart />} />
+                <Route path="cart/payment" element={<Payment />} />
                 
                 <Route path="about-us" element={<AboutUs />} />
                 <Route path="contact-us" element={<ContactUs />} />
