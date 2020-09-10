@@ -331,7 +331,8 @@ const initialtate = {
         },
 
     ],
-    cart: []
+    cart: [],
+    total: 0
 };
 
 // create context
@@ -389,6 +390,8 @@ export const GlobalProvider = ({ children }) => {
             type: 'DECREASE',
             payload: filterCart
         });
+
+        getTotal()
     }
 
     // function for increasing the product quantity
@@ -410,6 +413,8 @@ export const GlobalProvider = ({ children }) => {
             type: 'INCREASE',
             payload: filterCart
         });
+
+        getTotal();
     }
 
     // function for removing the product from the cart
@@ -436,16 +441,31 @@ export const GlobalProvider = ({ children }) => {
         }
     }
 
+    // function for getting the total amount according to product price
+    function getTotal() {
+        const { cart } = state;
+
+        const res = cart.reduce((prev, product) => {
+            return (prev + (product.price * product.count));
+        }, 0);
+
+        dispatch({
+            type: 'TOTAL',
+            payload: res
+        });
+    }
 
 
     return (
         <GlobalContext.Provider value={{
             products: state.products,
             cart: state.cart,
+            total: state.total,
             addCart,
             increase,
             decrease,
-            removeProduct
+            removeProduct,
+            getTotal
         }}>
             {children}
         </GlobalContext.Provider>

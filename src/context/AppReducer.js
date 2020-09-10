@@ -29,6 +29,13 @@ export default (state, action) => {
                 cart: [...state.cart.filter( product => product._productId !== action.payload._productId )]
             }
 
+        case 'TOTAL':
+
+            return {
+                ...state,
+                total: action.payload
+            }
+
         default: 
             return state;
     }

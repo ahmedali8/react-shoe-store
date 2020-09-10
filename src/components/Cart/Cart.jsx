@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Grid, Typography, Card, CardMedia, Button } from '@material-ui/core';
 import Fab from '@material-ui/core/Fab';
@@ -12,9 +13,10 @@ import styles from './Cart.module.css';
 
 const Cart = () => {
 
-    const { cart, increase, decrease, removeProduct } = useContext(GlobalContext);
+    const { cart, total, increase, decrease, removeProduct } = useContext(GlobalContext);
 
     // console.log(cart)
+    // console.log(total)
 
     // const fake = [
     //     {
@@ -86,7 +88,7 @@ const Cart = () => {
                                     {name}
                                 </Typography>
                                 <Typography variant="h6" className={styles.price}>
-                                    ${price}
+                                    ${price * count}
                                 </Typography>
                                 <Typography variant="body2" component="p">
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
@@ -119,6 +121,29 @@ const Cart = () => {
                     </Grid>
                 ))
             }
+
+            <Grid
+                container
+                justify="space-around"
+                alignItems="center"
+            >
+                <Link to="payment" className={styles.link}>
+                    <Button
+                        size="medium"
+                        color="primary"
+                        variant="contained"
+                        className={styles.btn}
+                    >
+                        Payment
+                    </Button>
+                </Link>
+                <Typography
+                    variant="h5"
+                    color="secondary"
+                >
+                    Total: ${total ? total : 0}
+                    </Typography>
+            </Grid>
         </div>
     );
 };
