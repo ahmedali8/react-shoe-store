@@ -22,6 +22,7 @@ const Cart = () => {
                 container
                 justify="center"
                 alignItems="flex-start"
+                className={styles.container}
             >
                 <Grid item xs={10} md={12}>
                     <Typography
@@ -33,7 +34,7 @@ const Cart = () => {
                     </Typography>
                 </Grid>
                 <Grid item xs={10} md={12}>
-                    <h2 style={{ textAlign: "center" }} className={styles.container}>No Product is available right now</h2>
+                    <h2 style={{ textAlign: "center" }}>No Product is available right now</h2>
                 </Grid>
             </Grid>
         );
