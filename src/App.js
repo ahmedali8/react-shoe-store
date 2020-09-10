@@ -8,7 +8,7 @@ import styles from './App.module.css';
 
 function App() {
 	return (
-		<div classname={styles.container}>
+		<div className={styles.container}>
 			<Header />
 
             <Routes>
