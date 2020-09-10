@@ -1,8 +1,8 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useEffect } from 'react';
 import AppReducer from './AppReducer';
 
 
-const initialtate = {
+const initialState = {
 
     products: [
         {
@@ -336,12 +336,30 @@ const initialtate = {
 };
 
 // create context
-export const GlobalContext = createContext(initialtate);
+export const GlobalContext = createContext(initialState);
 
 // create provider
 export const GlobalProvider = ({ children }) => {
 
-    const [state, dispatch] = useReducer(AppReducer, initialtate);
+    const [state, dispatch] = useReducer(AppReducer, initialState, () => {
+
+        const dataCart = localStorage.getItem('dataCart');
+        const dataTotal = localStorage.getItem('dataTotal');
+
+        return ({
+            ...initialState,
+            cart: (dataCart !== null ? JSON.parse(dataCart) : initialState.cart),
+            total: (dataTotal !== null ? JSON.parse(dataTotal) : initialState.total)
+        })
+    });
+
+
+    useEffect(() => {
+        localStorage.setItem('dataCart', JSON.stringify(state.cart))
+        localStorage.setItem('dataTotal', JSON.stringify(state.total))
+    }, [state]);
+
+
 
     // Actions
 
@@ -364,6 +382,8 @@ export const GlobalProvider = ({ children }) => {
                 type: 'ADD_TO_CART',
                 payload: data
             });
+
+            getTotal()
         }
         else {
             alert('This product is already added to the cart');
@@ -377,7 +397,7 @@ export const GlobalProvider = ({ children }) => {
         // iterating the array to find the product that matches the argument(productId) and decrementing it's count
         cart.forEach((product, index) => {
             if (product._productId === productId) {
-                product.count === 1 ? product.count = 1 : product.count -=1;
+                product.count === 1 ? product.count = 1 : product.count -= 1;
             }
         });
 
@@ -401,7 +421,7 @@ export const GlobalProvider = ({ children }) => {
         // iterating the array to find the product that matches the argument(productId) and incrementing it's count
         cart.forEach((product, index) => {
             if (product._productId === productId) {
-                product.count +=1;
+                product.count += 1;
             }
         });
 
@@ -419,25 +439,27 @@ export const GlobalProvider = ({ children }) => {
 
     // function for removing the product from the cart
     function removeProduct(productId) {
-        if(window.confirm("Do you want to delete this product")) {
+        if (window.confirm("Do you want to delete this product")) {
 
             const { cart } = state;
-            
+
             // iterating the array to find the product that matches the argument(productId) and incrementing it's count
             cart.forEach((product, index) => {
-                if(product._productId === productId) {
+                if (product._productId === productId) {
                     cart.splice(index, 1);
                 }
             });
-            
+
             // The filter() method creates an array filled with all array elements that pass a test
             // filtering(building the obj) the obj in which we increased the count through forEach
             const filterCart = cart.filter((product) => (product._productId === productId));
-            
+
             dispatch({
                 type: 'REMOVE_PRODUCT',
                 payload: filterCart
             });
+
+            getTotal()
         }
     }
 
