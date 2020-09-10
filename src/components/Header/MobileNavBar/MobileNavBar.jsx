@@ -2,7 +2,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -75,12 +75,12 @@ export default function MobileNavBar({ navData }) {
 
     const iconClasses = ['flaticon-home', 'flaticon-sport-shoes', 'flaticon-shoe', 'flaticon-shoes', 'flaticon-information', 'flaticon-24-hours-support'];
 
-    const handleDrawerOpen = () => {
-        setOpen(true);
-    };
+    const toggleDrawer = (anchor, open) => (event) => {
+        if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+            return;
+        }
 
-    const handleDrawerClose = () => {
-        setOpen(false);
+        setOpen(open);
     };
 
     return (
@@ -94,18 +94,18 @@ export default function MobileNavBar({ navData }) {
             >
                 <Toolbar id="back-to-top-anchor">
                     <Typography variant="h6" noWrap className={classes.title}>
-                        <Link to="/" style={{textDecoration: 'none', color: '#fff'}}>
+                        <Link to="/" style={{ textDecoration: 'none', color: '#fff' }}>
                             Shoes Inc.
                         </Link>
                     </Typography>
 
                     <CartBadge />
-                    
+
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
                         edge="end"
-                        onClick={handleDrawerOpen}
+                        onClick={toggleDrawer("right", true)}
                         className={clsx(open && classes.hide)}
                     >
                         <MenuIcon />
@@ -113,11 +113,13 @@ export default function MobileNavBar({ navData }) {
                 </Toolbar>
             </AppBar>
 
-            <Drawer
+            <SwipeableDrawer
                 className={classes.drawer}
                 variant="temporary"
                 anchor="right"
                 open={open}
+                onOpen={toggleDrawer("right", true)}
+                onClose={toggleDrawer("right", false)}
                 classes={{
                     paper: classes.drawerPaper,
                 }}
@@ -126,7 +128,7 @@ export default function MobileNavBar({ navData }) {
                 }}
             >
                 <div className={classes.drawerHeader}>
-                    <IconButton onClick={handleDrawerClose}>
+                    <IconButton onClick={toggleDrawer("right", false)}>
                         {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
                     </IconButton>
                 </div>
@@ -143,7 +145,7 @@ export default function MobileNavBar({ navData }) {
                         </Link>
                     ))}
                 </List>
-            </Drawer>
+            </SwipeableDrawer>
         </div>
     );
 }
