@@ -15,25 +15,28 @@ const Cart = () => {
 
     const { cart, total, increase, decrease, removeProduct } = useContext(GlobalContext);
 
-    // console.log(cart)
-    // console.log(total)
-
-    // const fake = [
-    //     {
-    //         _productId: "featured-product-1",
-    //         name: "SHOE 1",
-    //         price: 99,
-    //         count: 1,
-    //         img:
-    //             "/assets/images/shoes/shoe-1.jpg",
-    //         colors: ["orange", "black", "crimson", "teal"],
-    //     }
-    // ];
-
-
 
     if (cart.length === 0) {
-        return <h2 style={{ textAlign: "center" }} className={styles.container}>Nothings Product</h2>
+        return (
+            <Grid
+                container
+                justify="center"
+                alignItems="flex-start"
+            >
+                <Grid item xs={10} md={12}>
+                    <Typography
+                        variant="h3"
+                        color="primary"
+                        className={styles.Maintitle}
+                    >
+                        Cart
+                    </Typography>
+                </Grid>
+                <Grid item xs={10} md={12}>
+                    <h2 style={{ textAlign: "center" }} className={styles.container}>No Product is available right now</h2>
+                </Grid>
+            </Grid>
+        );
     }
 
 
@@ -142,7 +145,7 @@ const Cart = () => {
                     color="secondary"
                 >
                     Total: ${total ? total : 0}
-                    </Typography>
+                </Typography>
             </Grid>
         </div>
     );
