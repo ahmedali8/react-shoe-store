@@ -45,7 +45,27 @@
 
 
 @media (min-width: 720px) {
+
     .container {
         height: 100vh !important;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .btnContainer {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-left: 0 !important;
+    }
+
+    .btn {
+        margin: 20px 0 !important;
+    }
+
+    .btn > * {
+        padding: 4px 14px !important;
+        font-size: 14px !important;
     }
 }

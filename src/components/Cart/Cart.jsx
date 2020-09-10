@@ -95,7 +95,7 @@ const Cart = () => {
                                     container
                                     direction="row"
                                     justify="flex-start"
-
+                                    className={styles.btnContainer}
                                 >
                                     <Fab size="small" color="secondary" onClick={() => decrease(_productId)}>
                                         <RemoveIcon />
