@@ -7,7 +7,7 @@ const NotFound = () => {
 
     return (
         <div className={styles.container}>
-            <Typography variant="h1" color="secondary" style={{ textAlign: 'center' }}>
+            <Typography variant="h1" color="secondary" style={{ textAlign: 'center' }} className={styles.heading}>
                 ERROR 404
                 <br />
                 PAGE NOT FOUND

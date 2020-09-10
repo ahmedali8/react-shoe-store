@@ -1,5 +1,5 @@
 .container {
-    /* height: 100vh !important; */
+    height: 100vh !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,5 +8,11 @@
 @media (min-width: 720px) {
     .container {
         height: 80vh !important;
+    }
+}
+
+@media (max-width: 720px) {
+    .heading {
+        font-size: 40px !important;
     }
 }
