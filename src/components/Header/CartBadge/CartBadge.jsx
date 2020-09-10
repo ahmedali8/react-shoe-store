@@ -22,10 +22,10 @@ const StyledBadge = withStyles((theme) => ({
 
 export default function CartBadge() {
 
-    const { cart } = useContext(GlobalContext);
+    const { cart, getTotal } = useContext(GlobalContext);
 
   return (
-      <Link to="cart" className={styles.link}>
+      <Link to="cart" className={styles.link} onClick={() => getTotal()}>
         <IconButton aria-label="cart">
         <StyledBadge badgeContent={cart.length} color="secondary">
             <ShoppingCartIcon style={{color: '#fff'}} />
