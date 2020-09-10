@@ -78,7 +78,7 @@ const ProductIndex = () => {
                                 </CardActionArea>
                                 <CardActions>
                                     <Link to={_productId} className={styles.link}>
-                                        <Button size="small" color="primary" variant="contained">
+                                        <Button size="small" color="primary" variant="contained" onClick={() => window.scrollTo(0, 0)}>
                                             Buy Now
                                         </Button>
                                     </Link>
