@@ -12,7 +12,7 @@ import styles from './Cart.module.css';
 
 const Cart = () => {
 
-    const { cart, increase, decrease } = useContext(GlobalContext);
+    const { cart, increase, decrease, removeProduct } = useContext(GlobalContext);
 
     // console.log(cart)
 
@@ -109,6 +109,7 @@ const Cart = () => {
                                         color="primary"
                                         variant="contained"
                                         className={styles.btn}
+                                        onClick={() => removeProduct(_productId)}
                                     >
                                         Remove from Cart
                                     </Button>

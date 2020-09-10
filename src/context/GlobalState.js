@@ -369,9 +369,7 @@ export const GlobalProvider = ({ children }) => {
         }
     };
 
-
-
-
+    // function for decreasing the product quantity
     function decrease(productId) {
         const { cart } = state;
 
@@ -393,7 +391,7 @@ export const GlobalProvider = ({ children }) => {
         });
     }
 
-
+    // function for increasing the product quantity
     function increase(productId) {
         const { cart } = state;
 
@@ -414,6 +412,29 @@ export const GlobalProvider = ({ children }) => {
         });
     }
 
+    // function for removing the product from the cart
+    function removeProduct(productId) {
+        if(window.confirm("Do you want to delete this product")) {
+
+            const { cart } = state;
+            
+            // iterating the array to find the product that matches the argument(productId) and incrementing it's count
+            cart.forEach((product, index) => {
+                if(product._productId === productId) {
+                    cart.splice(index, 1);
+                }
+            });
+            
+            // The filter() method creates an array filled with all array elements that pass a test
+            // filtering(building the obj) the obj in which we increased the count through forEach
+            const filterCart = cart.filter((product) => (product._productId === productId));
+            
+            dispatch({
+                type: 'REMOVE_PRODUCT',
+                payload: filterCart
+            });
+        }
+    }
 
 
 
@@ -423,7 +444,8 @@ export const GlobalProvider = ({ children }) => {
             cart: state.cart,
             addCart,
             increase,
-            decrease
+            decrease,
+            removeProduct
         }}>
             {children}
         </GlobalContext.Provider>
